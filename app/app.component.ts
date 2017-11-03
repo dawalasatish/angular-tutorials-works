@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'my-app',
   template: `<div>
@@ -14,8 +15,14 @@ import { Component } from '@angular/core';
 					<p *ngSwitchWhen="'blue'">Blue will be print on screen</p>
 					<p *ngSwitchWhen="'green'">Green color will be print on screen</p>
 					<p *ngSwitchDefault>Invalid Color</p>
+					<p>ckjasckasfcvasdkcvksad</p>
 				</div>
-  			</div>`,
+				<ul>
+					<li *ngFor ="let array1 of arrays">{{array1}}</li>
+				</ul>
+		
+  			</div>
+				`,
   styles:[`
 				h3{
 					color:#998fbf;
@@ -28,6 +35,7 @@ export class AppComponent {
 	public lname;
 	public showElement =true;
 	public color = 'yellow';
+	public arrays = ['Satish','Sravan','Ramana'];
 	onClick(value){
 
 		alert('button clicked..!! '   +value);
